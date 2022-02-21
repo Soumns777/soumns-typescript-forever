@@ -95,13 +95,16 @@
   const nu: null = null
   const un: undefined = undefined
 
-  // 6.void 表示没有任何类型返回,一般用于函数没有返回的时候
+  // 6.void、never
+  // void表示没有任何类型返回,一般用于函数没有返回的时候
+  // never 表示永不存在的属性,一般用于类型校验以及总是抛出异常的情况
   let func = (): void => {
     console.log('void  没有任何返回')
   }
 
-  // 7.never 表示永不存在的属性,一般用于类型校验以及总是抛出异常的情况
-  // 不同于void,void表示没有任何类型,never
+  let fun1 = (): never => {
+    throw new Error('抛出报错')
+  }
 
 
 })()
