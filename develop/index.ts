@@ -2,6 +2,6 @@
  * Typescript进阶类型
  */
 
-(() => {
-  console.log('多人协作开发');
-})();
+// 交叉类型
+
+export default {};
