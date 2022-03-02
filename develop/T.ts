@@ -42,31 +42,29 @@ console.log(getAge('yoona', 19), '-->泛型接口')
 
 
 // 三、泛型类
-interface IAnimal<T, M> {
+interface IAnimal<T, M, K> {
   name: T,
   age: M,
 
-  // eat(food: K): K
+  eat(food: K): K
 }
 
-class Animal<T, M> implements IAnimal<T, M> {
+class Animal<T, M, K> implements IAnimal<T, M, K> {
 
 
-  constructor(public name: T, public age: M) {
+  constructor(public name: T, public age: M, public food: K) {
     this.name = name
     this.age = age
   }
 
-  // eat(food: K) {
-  //   if (typeof food == "string") {
-  //     console.log('测试')
-  //   }
-  // }
+  eat(food: K): K {
+    return food
+  }
 }
 
-let dog = new Animal('iu', 17)
+let dog = new Animal('iu', 17, '骨头')
 console.log(dog.name, dog.age, '-->泛型类')
-// dog.eat('gutou')
+console.log(dog.eat('骨头'))
 
 
 export {}
