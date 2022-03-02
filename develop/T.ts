@@ -63,7 +63,7 @@ let dog = new Animal('iu', 17, '骨头');
 console.log(dog.name, dog.age, '-->泛型类');
 console.log(dog.eat('骨头'));
 
-// 四、
+// 四、`
 interface IDes {
   name: string;
   age: number;
